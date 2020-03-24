@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre panier{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron"> 
+        <h1>Votre panier</h1>
+    </div>   
+
+    <table classe="table">
+        <thead>
+            <th>Produit</th>
+            <th>Qantité</th>
+            <th>Prix</th>
+            <th>Date d'ajout</th>
+        </thead>
+
+        <tbody>
+            {% for paniers in paniers %}
+                <td>{{paniers.produits.nom}}</td>
+            {% endfor %}
+        </tbody>
+
+
+
+
+    </table> 
+
+{% endblock %}
